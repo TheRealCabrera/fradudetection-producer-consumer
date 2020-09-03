@@ -22,6 +22,7 @@ def invokeModel(msg, access_token, seldon):
 # ['V3','V4','V10','V11','V12','V14','V17','Amount'] - Fields to be sent to the model
 
     payload = ""+msg[3]+","+msg[4]+","+msg[10]+","+msg[11]+","+msg[12]+","+msg[14]+","+msg[17]+","+msg[29]
+    print(payload);
     headers = {'Content-type': 'application/json', 'Authorization': 'Bearer {}'.format(access_token)}
     #Read the test dataframe and stream each row
 
