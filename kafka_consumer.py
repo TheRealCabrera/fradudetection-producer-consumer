@@ -29,8 +29,8 @@ def invokeModel(msg, access_token, seldon):
     requestPrediction = requests.post(seldon+'/api/v0.1/predictions', headers=headers, json={"strData": payload })
     predictionData = requestPrediction.json();
     print(predictionData);
-    data = json.dumps(requestPrediction);
-    print(data)
+    #data = json.dumps(requestPrediction);
+    #print(data)
     datafield = predictionData['data']
     predictionArray = datafield['ndarray']
     print(predictionArray[0])
